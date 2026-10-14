@@ -1,0 +1,210 @@
+/* Virtual Dog Park - simple, readable styles for phone and laptop */
+
+:root {
+    --ink: #22303c;
+    --muted: #5c6b7a;
+    --line: #d8e2ec;
+    --brand: #2f6f8f;
+    --brand-dark: #23576f;
+    --bg: #f6f9fc;
+    --card: #ffffff;
+    --ok: #1f7a44;
+    --warn: #b23a2f;
+    --radius: 12px;
+}
+
+* { box-sizing: border-box; }
+
+body {
+    margin: 0;
+    font-family: "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+    color: var(--ink);
+    background: var(--bg);
+    line-height: 1.6;
+}
+
+/* ---------- Header ---------- */
+.hero {
+    background: linear-gradient(160deg, #2f6f8f, #3d8bb0);
+    color: #fff;
+    padding: 32px 20px 28px;
+    text-align: center;
+}
+.hero h1 { margin: 0 0 8px; font-size: 1.7rem; }
+.welcome { margin: 0 auto; max-width: 46rem; color: #e8f3f9; }
+
+/* ---------- Layout ---------- */
+main {
+    max-width: 62rem;
+    margin: 0 auto;
+    padding: 24px 16px 40px;
+}
+section { margin-bottom: 36px; }
+h2 {
+    font-size: 1.25rem;
+    margin: 0 0 6px;
+    padding-bottom: 6px;
+    border-bottom: 2px solid var(--line);
+}
+.section-intro { color: var(--muted); margin-top: 0; }
+
+/* ---------- Encyclopedia cards ---------- */
+.cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 16px;
+    margin-top: 16px;
+}
+.card {
+    background: var(--card);
+    border: 1px solid var(--line);
+    border-radius: var(--radius);
+    padding: 16px;
+    text-align: center;
+}
+.card img { display: block; margin: 0 auto 10px; }
+.card h3 { margin: 0 0 8px; font-size: 1.05rem; color: var(--brand-dark); }
+.notes {
+    margin: 4px 0;
+    font-size: 0.9rem;
+    text-align: left;
+    color: #3a4a58;
+}
+
+/* ---------- Adoption form ---------- */
+#adoption-form {
+    background: var(--card);
+    border: 1px solid var(--line);
+    border-radius: var(--radius);
+    padding: 16px;
+    margin-top: 14px;
+    max-width: 32rem;
+}
+.field { margin-bottom: 12px; }
+label {
+    display: block;
+    font-weight: 600;
+    font-size: 0.9rem;
+    margin-bottom: 4px;
+}
+select, input[type="text"] {
+    width: 100%;
+    padding: 9px 10px;
+    font-size: 1rem;
+    font-family: inherit;
+    border: 1px solid #b9c9d6;
+    border-radius: 8px;
+    background: #fff;
+    color: var(--ink);
+}
+select:focus, input:focus, button:focus {
+    outline: 2px solid var(--brand);
+    outline-offset: 1px;
+}
+
+/* ---------- Buttons ---------- */
+button {
+    font-family: inherit;
+    font-size: 0.95rem;
+    padding: 9px 16px;
+    border: 1px solid #b9c9d6;
+    border-radius: 8px;
+    background: #eef4f8;
+    color: var(--ink);
+    cursor: pointer;
+}
+button:hover { background: #e2edf4; }
+button.primary {
+    background: var(--brand);
+    border-color: var(--brand);
+    color: #fff;
+    font-weight: 600;
+}
+button.primary:hover { background: var(--brand-dark); }
+button.danger {
+    background: #fdecea;
+    border-color: #e4b5af;
+    color: var(--warn);
+}
+button.danger:hover { background: #f9dcd8; }
+
+/* ---------- Messages ---------- */
+.message { min-height: 1.4em; margin: 10px 0 0; font-size: 0.9rem; }
+.message.error { color: var(--warn); font-weight: 600; }
+.message.success { color: var(--ok); font-weight: 600; }
+
+/* ---------- Dog panel ---------- */
+#dog-panel {
+    background: var(--card);
+    border: 1px solid var(--line);
+    border-radius: var(--radius);
+    padding: 18px;
+    margin-top: 14px;
+}
+.dog-summary {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    align-items: center;
+}
+.dog-visual img { display: block; }
+.dog-stats {
+    display: grid;
+    grid-template-columns: auto auto;
+    gap: 4px 14px;
+    margin: 0;
+    font-size: 0.95rem;
+}
+.dog-stats dt { font-weight: 600; color: var(--muted); }
+.dog-stats dd { margin: 0; }
+
+/* ---------- Growth bar ---------- */
+.growth {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin: 20px 0;
+    flex-wrap: wrap;
+}
+.growth-label { font-weight: 600; font-size: 0.9rem; color: var(--muted); }
+.growth-track {
+    flex: 1 1 200px;
+    height: 14px;
+    background: #e6eef5;
+    border: 1px solid var(--line);
+    border-radius: 999px;
+    overflow: hidden;
+}
+.growth-fill {
+    height: 100%;
+    width: 20%;
+    background: #4f9dc4;
+    border-radius: 999px;
+    transition: width 0.25s ease;
+}
+.growth-fill.stage-young { background: #3f86ab; }
+.growth-fill.stage-adult { background: #23576f; }
+.growth-text { font-size: 0.9rem; font-weight: 600; }
+
+.actions { display: flex; flex-wrap: wrap; gap: 10px; }
+
+/* ---------- Footer ---------- */
+footer {
+    border-top: 1px solid var(--line);
+    padding: 18px 16px 28px;
+    text-align: center;
+    color: var(--muted);
+    font-size: 0.82rem;
+}
+footer p { max-width: 52rem; margin: 0 auto; }
+
+/* ---------- Narrow screens ---------- */
+@media (max-width: 560px) {
+    .hero { padding: 24px 16px 20px; }
+    .hero h1 { font-size: 1.4rem; }
+    main { padding: 18px 12px 32px; }
+    .dog-summary { flex-direction: column; align-items: flex-start; }
+    .dog-stats { grid-template-columns: auto 1fr; width: 100%; }
+    .actions button { flex: 1 1 40%; }
+    .growth { gap: 6px; }
+}

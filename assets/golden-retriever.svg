@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="200" height="200" role="img" aria-label="Illustration of a Golden Retriever">
+  <title>Illustration of a Golden Retriever</title>
+  <!-- background -->
+  <rect width="200" height="200" rx="16" fill="#fdf5e3"/>
+  <!-- body -->
+  <ellipse cx="100" cy="134" rx="50" ry="36" fill="#e0a94f"/>
+  <!-- lighter chest -->
+  <ellipse cx="100" cy="148" rx="28" ry="21" fill="#f6e2b8"/>
+  <!-- legs -->
+  <rect x="68" y="160" width="13" height="24" rx="6.5" fill="#cf9a42"/>
+  <rect x="119" y="160" width="13" height="24" rx="6.5" fill="#cf9a42"/>
+  <!-- head -->
+  <circle cx="100" cy="76" r="40" fill="#e0a94f"/>
+  <!-- feathery fur around head -->
+  <path d="M60 76 q-10 16 -2 34 q10 -12 12 -24 z" fill="#d09a42"/>
+  <path d="M140 76 q10 16 2 34 q-10 -12 -12 -24 z" fill="#d09a42"/>
+  <!-- muzzle -->
+  <ellipse cx="100" cy="92" rx="23" ry="16" fill="#f6e2b8"/>
+  <!-- nose -->
+  <ellipse cx="100" cy="86" rx="7" ry="5" fill="#3b2b20"/>
+  <!-- mouth -->
+  <path d="M100 91 v9 M100 100 q-8 6 -13 1 M100 100 q8 6 13 1" stroke="#3b2b20" stroke-width="2" fill="none" stroke-linecap="round"/>
+  <!-- happy eyes -->
+  <circle cx="86" cy="68" r="4.5" fill="#2a2018"/>
+  <circle cx="114" cy="68" r="4.5" fill="#2a2018"/>
+  <path d="M78 78 q8 6 16 0 M106 78 q8 6 16 0" stroke="#c1842f" stroke-width="2" fill="none" stroke-linecap="round"/>
+  <!-- ears -->
+  <ellipse cx="63" cy="82" rx="11" ry="24" fill="#d09a42" transform="rotate(14 63 82)"/>
+  <ellipse cx="137" cy="82" rx="11" ry="24" fill="#d09a42" transform="rotate(-14 137 82)"/>
+  <!-- tail (wagging up) -->
+  <path d="M148 120 q26 -4 28 -30" stroke="#e0a94f" stroke-width="12" fill="none" stroke-linecap="round"/>
+  <path d="M152 122 q22 -8 24 -26" stroke="#f6e2b8" stroke-width="5" fill="none" stroke-linecap="round"/>
+</svg>

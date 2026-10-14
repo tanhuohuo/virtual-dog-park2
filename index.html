@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Virtual Dog Park</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="hero">
+        <h1>Virtual Dog Park</h1>
+        <p class="welcome">Welcome to our park! Meet three friendly breeds, then adopt your own virtual dog to feed, play with and watch grow.</p>
+    </header>
+
+    <main>
+        <!-- Round 1: Dog Encyclopedia -->
+        <section id="encyclopedia" aria-labelledby="encyclopedia-title">
+            <h2 id="encyclopedia-title">Dog Encyclopedia</h2>
+            <p class="section-intro">Each breed below has its own illustration and short care notes on size, personality and everyday care.</p>
+
+            <div class="cards">
+                <article class="card">
+                    <img src="assets/beagle.svg" alt="Illustration of a Beagle" width="160" height="160">
+                    <h3>Beagle</h3>
+                    <p class="notes"><strong>Size:</strong> Small to medium, roughly 10-11 kg and 33-41 cm tall.</p>
+                    <p class="notes"><strong>Personality:</strong> Curious, cheerful and very scent-driven.</p>
+                    <p class="notes"><strong>Everyday care:</strong> Needs a daily walk with plenty of sniffing time, plus regular ear checks.</p>
+                </article>
+
+                <article class="card">
+                    <img src="assets/golden-retriever.svg" alt="Illustration of a Golden Retriever" width="160" height="160">
+                    <h3>Golden Retriever</h3>
+                    <p class="notes"><strong>Size:</strong> Large, roughly 25-34 kg and 51-61 cm tall.</p>
+                    <p class="notes"><strong>Personality:</strong> Gentle, patient and eager to please.</p>
+                    <p class="notes"><strong>Everyday care:</strong> Needs long active walks and weekly brushing of its thick coat.</p>
+                </article>
+
+                <article class="card">
+                    <img src="assets/poodle.svg" alt="Illustration of a Poodle" width="160" height="160">
+                    <h3>Poodle</h3>
+                    <p class="notes"><strong>Size:</strong> Varies by type; a standard Poodle is roughly 20-32 kg and over 38 cm tall.</p>
+                    <p class="notes"><strong>Personality:</strong> Clever, lively and quick to learn new tricks.</p>
+                    <p class="notes"><strong>Everyday care:</strong> Needs mental games as well as walks, and a clip every few weeks.</p>
+                </article>
+            </div>
+        </section>
+
+        <!-- Round 2 + 3: Adoption, Care and Growth -->
+        <section id="my-dog" aria-labelledby="my-dog-title">
+            <h2 id="my-dog-title">My Virtual Dog</h2>
+
+            <!-- Adoption form -->
+            <div id="adoption-form">
+                <div class="field">
+                    <label for="breed-select">Choose a breed</label>
+                    <select id="breed-select">
+                        <option value="Beagle">Beagle</option>
+                        <option value="Golden Retriever">Golden Retriever</option>
+                        <option value="Poodle">Poodle</option>
+                    </select>
+                </div>
+
+                <div class="field">
+                    <label for="dog-name">Dog name (max 20 characters)</label>
+                    <input type="text" id="dog-name" maxlength="20" placeholder="e.g. Buddy" autocomplete="off">
+                </div>
+
+                <button id="adopt-btn" class="primary">Adopt</button>
+                <p id="form-message" class="message" role="status" aria-live="polite"></p>
+            </div>
+
+            <!-- Adopted dog panel -->
+            <div id="dog-panel" hidden>
+                <div class="dog-summary">
+                    <div class="dog-visual">
+                        <img id="dog-image" src="assets/beagle.svg" alt="Illustration of the adopted Beagle">
+                    </div>
+                    <dl class="dog-stats">
+                        <dt>Name</dt><dd id="stat-name">-</dd>
+                        <dt>Breed</dt><dd id="stat-breed">-</dd>
+                        <dt>Day</dt><dd id="stat-day">1</dd>
+                        <dt>Stage</dt><dd id="stat-stage">Puppy</dd>
+                        <dt>Happiness</dt><dd id="stat-happiness">50</dd>
+                    </dl>
+                </div>
+
+                <div class="growth">
+                    <span class="growth-label">Growth</span>
+                    <div class="growth-track" role="img" aria-label="Growth progress bar">
+                        <div id="growth-bar" class="growth-fill"></div>
+                    </div>
+                    <span id="growth-text" class="growth-text">Puppy</span>
+                </div>
+
+                <div class="actions">
+                    <button id="feed-btn">Feed (+10)</button>
+                    <button id="play-btn">Play (+10)</button>
+                    <button id="next-day-btn">Next Day (-5)</button>
+                    <button id="start-over-btn" class="danger">Start Over</button>
+                </div>
+                <p id="action-message" class="message" role="status" aria-live="polite"></p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>Pet progress is saved in this browser only (localStorage), not in any online account. The illustrations are simple project-created SVGs, not real dog photographs.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
